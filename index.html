@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task 02 — Guess the Number</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="title">GUESS THE NUMBER</h1>
+      <p class="subtitle">Guess the randomly generated number</p>
+    </header>
+
+    <section class="card game-card" aria-labelledby="game-heading">
+      <div class="left">
+        <img src="pngtree-red-question-mark-symbol-png-image_14540396.avif" alt="question mark" class="question-img" />
+      </div>
+
+      <div class="right">
+        <h2 id="game-heading">Can you guess it?</h2>
+        <p class="instructions">
+          A number between <strong id="min">1</strong> and <strong id="max">100</strong> has been generated.
+          Enter your guess and press <strong>Check</strong>.
+        </p>
+
+        <div class="controls">
+          <input id="guessInput" type="number" inputmode="numeric" min="1" max="100" placeholder="Enter your guess" />
+          <div class="buttons">
+            <button id="checkBtn" class="btn primary">Check</button>
+            <button id="newBtn" class="btn outline">New Game</button>
+          </div>
+        </div>
+
+        <div id="message" class="message" aria-live="polite"></div>
+
+        <div class="stats">
+          <span>Attempts: <strong id="attempts">0</strong></span>
+          <span>Best: <strong id="best">—</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>SkillCraft Technology • Task 02</small>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
